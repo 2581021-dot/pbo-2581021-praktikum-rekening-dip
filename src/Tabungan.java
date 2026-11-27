@@ -1,4 +1,4 @@
-public class Tabungan extends Rekening implements BerBunga {
+public class Tabungan extends Rekening implements BerBunga, BisaDitarik {
     private double bungaPersen;
 
     public Tabungan(String nomor, String pemilik, int saldo, double bungaPersen) {
@@ -19,6 +19,14 @@ public class Tabungan extends Rekening implements BerBunga {
         int bunga = (int) (saldo * bungaPersen / 100);
         setor(bunga);
         return bunga;
+    }
+    @Override
+    public boolean tarik(int jumlah) {
+        if (jumlah <= 0 || jumlah > saldo) {
+            return false;
+        }
+        saldo -= jumlah;
+        return true;
     }
 
     @Override

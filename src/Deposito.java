@@ -18,12 +18,6 @@ public class Deposito extends Rekening implements BerBunga {
         return bunga;
     }
 
-    // Belum jatuh tempo: penarikan selalu gagal (false, bukan exception)
-    @Override
-    public boolean tarik(int jumlah) {
-        return false;
-    }
-
     @Override
     public String keterangan() {
         return "Deposito, bunga " + bungaPersen + "% per bulan";

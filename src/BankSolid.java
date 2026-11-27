@@ -16,7 +16,7 @@ public class BankSolid {
         System.out.println("========== AKHIR BULAN ============");
         proses.potongBiayaAdmin(semua);
         proses.tambahBunga(berbunga);
-        proses.autodebet(semua, 50000);
+        proses.autodebet(bisaDitarik, 50000);
         System.out.println();
         laporan.cetakDaftar("========== REKENING AKHIR =========", semua);
         laporan.cetakTotal(semua);

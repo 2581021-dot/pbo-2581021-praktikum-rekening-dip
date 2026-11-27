@@ -13,10 +13,10 @@ public class ProsesAkhirBulan {
         }
     }
 
-    public void autodebet(Rekening[] semua, int jumlah) {
-        for (Rekening r : semua) {
-            String hasil = r.tarik(jumlah) ? Rekening.formatRupiah(jumlah) : "gagal";
-            System.out.printf("%s autodebet    : %s%n", r.getNomor(), hasil);
+    public void autodebet(BisaDitarik[] bisaDitarik, int jumlah) {
+        for (BisaDitarik r : bisaDitarik) {
+            String hasil = r.tarik(jumlah) ? "berhasil" : "gagal";
+            notifikasi.kirim(r.getNomor(), "autodebet " + Rekening.formatRupiah(jumlah) + " " + hasil);
         }
     }
 }
