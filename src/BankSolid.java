@@ -13,7 +13,7 @@ public class BankSolid {
         // Error compiler: incompatible types: Deposito cannot be converted to BisaDitarik
         // (baris percobaan sudah dihapus)
 
-        Notifikasi notifikasi = new SmsNotifikasi();
+        Notifikasi notifikasi = new EmailNotifikasi();
         // Uji SMS: new EmailNotifikasi() diganti new SmsNotifikasi(), dijalankan, lalu dikembalikan.
         // Baris yang perlu diubah: 1 baris (hanya di main)
         ProsesAkhirBulan proses = new ProsesAkhirBulan(notifikasi);   // DIP: constructor injection
